@@ -1,0 +1,22 @@
+{
+    "participants": [
+        {
+            "id": 4,
+            "name": "Walter Grey",
+            "email": "wgrey@gmail.com",
+            "phone": "456-7865",
+            "position": "Solution Architect",
+            "status": "online",
+            "photoUrl": "/img/avatars/walter.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "online",
+            "photoUrl": "/img/avatars/helen.jpg"
+        }
+    ]
+}

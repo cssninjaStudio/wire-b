@@ -1,0 +1,58 @@
+{
+    "participants": [
+        {
+            "id": 3,
+            "name": "Ben Walsh",
+            "email": "benwalsh@gmail.com",
+            "phone": "778-5565",
+            "position": "Software Engineer",
+            "status": "online",
+            "photoUrl": "/img/avatars/ben.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Kristie Brooks",
+            "email": "kristibr@gmail.com",
+            "phone": "123-4898",
+            "position": "Designer",
+            "status": "busy",
+            "photoUrl": "/img/avatars/kristie.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Walter Grey",
+            "email": "wgrey@gmail.com",
+            "phone": "456-7865",
+            "position": "Solution Architect",
+            "status": "away",
+            "photoUrl": "/img/avatars/walter.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Alec Stax",
+            "email": "alectax@gmail.com",
+            "phone": "735-7654",
+            "position": "Designer",
+            "status": "online",
+            "photoUrl": "/img/avatars/alec.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Jack Mc Mahon",
+            "email": "jackmm@gmail.com",
+            "phone": "461-7654",
+            "position": "Frontend Developer",
+            "status": "online",
+            "photoUrl": "/img/avatars/jack.jpg"
+        }
+    ]
+}

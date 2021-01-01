@@ -1,0 +1,207 @@
+/*! _dropdown.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Dropdowns
+========================================================================== */
+
+.dropdown.is-up {
+    .dropdown-menu {
+        bottom: 110%;
+        padding-bottom: 0;
+    }
+}
+
+.dropdown {
+
+    &.is-active {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    &.is-spaced {
+        > button {
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+
+            svg {
+                height: 18px;
+                width: 18px;
+                stroke-width: 1.4px;
+                stroke: $medium-text;
+            }
+        }
+
+        .action-icon {
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.05);
+            border: 1px solid darken($fade-grey, 4%);
+            padding-top: 0;
+            margin-top: 18px;
+            min-width: 280px;
+
+            &.has-margin {
+                margin-top: 10px;
+            }
+
+            .dropdown-content {
+                box-shadow: none;
+            }
+        }
+
+        .dropdown-item {
+            padding: 0 .5rem;
+            cursor: pointer;
+
+            &:hover {
+                .media {
+                    background: lighten($fade-grey, 3%);
+                }
+            }
+
+            &.is-selected {
+                .checkmark {
+                    display: block !important;
+                }
+            }
+
+            &.is-header {
+                padding: .75rem 1rem 0 1rem;
+
+                h5 {
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                    color: $medium-text;
+
+                    &.is-narrow {
+                        margin-bottom: 0;
+                    }
+                }
+
+                span {
+                    display: block;
+                    color: $muted-grey;
+                    font-size: .85rem;
+                    margin-bottom: 10px;
+                }
+            }
+
+            //Media object
+            .media {
+                align-items: center;
+                padding: .5rem 0;
+                border-radius: 5px;
+
+                h3 {
+                    font-weight: 500;
+                    margin-bottom: 0;
+                    font-size: .85rem;
+                    line-height: 1;
+                    transition: all .3s;
+                }
+
+                small, span {
+                    display: block;
+                    color: $medium-text;
+                    font-size: .75rem;
+                }
+
+                img {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+
+                i {
+                    font-size: 16px;
+                    margin-right: 22px;
+                    color: $medium-text;
+                    transition: all .3s;
+                }
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    margin: 0 12px;
+                    stroke: $medium-text;
+                    stroke-width: 1.4px;
+                    transition: all .3s;
+                }
+
+                .checkmark {
+                    display: none;
+
+                    svg {
+                        margin-right: 0;
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            //Title modifier
+            &.is-title {
+                background-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            //Active state
+            &.is-active {
+                background: $blue;
+
+                i {
+                    color: $white;
+                }
+
+                small {
+                    color: $white;
+                }
+            }
+
+            &:hover {
+                background: lighten($fade-grey, 7%);
+
+                h3 {
+                    color: $secondary;
+                }
+
+                i {
+                    color: $secondary;
+                }
+            }
+        }
+
+        &.is-accent {
+            .dropdown-item {
+                &:hover {
+                    background: lighten($fade-grey, 7%);
+
+                    h3 {
+                        color: $accent !important;
+                    }
+
+                    svg {
+                        stroke: $accent !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .media {
+        display: flex;
+    }
+
+    .dropdown-divider {
+        background: none;
+    }
+}

@@ -1,0 +1,148 @@
+<div x-show="activePanelTab === 'participants-tab'" id="people" class="panel-body is-people">
+    <div class="panel-body-inner has-slimscroll">
+
+        <!--Loader-->
+        <div class="loader-wrap">
+            <div class="loader loader-4"></div>
+        </div>
+
+        <div x-show="isParticipantsLoading" class="placeloaders-wrap participants-placeloaders">
+            <div class="participants-block">
+                <div class="block-title">
+                    <h4>Started by</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="block-content">
+                    <div class="placeloader-block">
+                        <div class="img loads"></div>
+                        <div class="meta">
+                            <div class="content-shape loads"></div>
+                            <div class="content-shape loads"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="participants-block">
+                <div class="block-title">
+                    <h4>In the room</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="block-content">
+                    <div class="placeloader-block">
+                        <div class="img loads"></div>
+                        <div class="meta">
+                            <div class="content-shape loads"></div>
+                            <div class="content-shape loads"></div>
+                        </div>
+                    </div>
+                    <div class="placeloader-block">
+                        <div class="img loads"></div>
+                        <div class="meta">
+                            <div class="content-shape loads"></div>
+                            <div class="content-shape loads"></div>
+                        </div>
+                    </div>
+                    <div class="placeloader-block">
+                        <div class="img loads"></div>
+                        <div class="meta">
+                            <div class="content-shape loads"></div>
+                            <div class="content-shape loads"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="!isParticipantsLoading" class="participants-wrap">
+            <div class="participants-block started-by">
+                <div class="block-title">
+                    <h4>Started by</h4>
+                    <div class="line"></div>
+                </div>
+                <div id="owner-participant" class="block-content">
+                    <div class="participant-item is-owner">
+                        <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/mike.jpg" alt="">
+                        <div class="meta">
+                            <span>Mike Baggio</span>
+                            <span>Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="participants-block other-participants">
+                <div class="block-title">
+                    <h4>In The Room</h4>
+                    <div class="line"></div>
+                </div>
+                <div id="regular-participants" class="block-content">
+                    <div class="participant-item is-participant">
+                        <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
+                        <div class="meta">
+                            <span>Helen Miller</span>
+                            <span>Head of Sales</span>
+                        </div>
+                        <div class="actions">
+                            <div class="loader-wrap">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="action is-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                            <button class="action is-call">
+                                <i data-feather="phone"></i>
+                            </button>
+                            <button class="action is-note">
+                                <i data-feather="file"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="participant-item is-participant">
+                        <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/ben.jpg" alt="">
+                        <div class="meta">
+                            <span>Ben Walsh</span>
+                            <span>Graphic Designer</span>
+                        </div>
+                        <div class="actions">
+                            <div class="loader-wrap">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="action is-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                            <button class="action is-call">
+                                <i data-feather="phone"></i>
+                            </button>
+                            <button class="action is-note">
+                                <i data-feather="file"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="participant-item is-participant">
+                        <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/walter.jpg" alt="">
+                        <div class="meta">
+                            <span>Walter Grey</span>
+                            <span>HR Manager</span>
+                        </div>
+                        <div class="actions">
+                            <div class="loader-wrap">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="action is-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                            <button class="action is-call">
+                                <i data-feather="phone"></i>
+                            </button>
+                            <button class="action is-note">
+                                <i data-feather="file"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

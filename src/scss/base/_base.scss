@@ -1,0 +1,45 @@
+/*! _base.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+base styles
+========================================================================== */
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+//Make all elements from the DOM inherit from the parent box-sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+var {
+    font-style: normal;
+}
+
+//Links
+a {
+    color: $primary;
+    text-decoration: none;
+}
+
+//Parapgraphs
+p {
+    color: $paragraph-font-color;
+    font-weight: $paragraph-font-weight;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.iziToast-wrapper {
+    .fas, .fab, .fal {
+        font-size: 16px !important;
+    }
+}

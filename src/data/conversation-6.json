@@ -1,0 +1,22 @@
+{
+    "participants": [
+        {
+            "id": 12,
+            "name": "Jim Stockton",
+            "email": "jimstockton@gmail.com",
+            "phone": "816-4598",
+            "position": "Backend Developer",
+            "status": "online",
+            "photoUrl": "/img/avatars/jim.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        }
+    ]
+}

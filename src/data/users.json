@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "Mike Baggio",
+        "email": "mikebaggio@gmail.com",
+        "phone": "555-1212",
+        "position": "Software Engineer",
+        "status": "online",
+        "photoUrl": "/img/avatars/mike.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Helen Miller",
+        "email": "helenmiller@gmail.com",
+        "phone": "489-1212",
+        "position": "Sales Manager",
+        "status": "busy",
+        "photoUrl": "/img/avatars/helen.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Ben Walsh",
+        "email": "benwalsh@gmail.com",
+        "phone": "778-5565",
+        "position": "Software Engineer",
+        "status": "online",
+        "photoUrl": "/img/avatars/ben.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Walter Grey",
+        "email": "wgrey@gmail.com",
+        "phone": "456-7865",
+        "position": "Solution Architect",
+        "status": "away",
+        "photoUrl": "/img/avatars/walter.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Audrey Sacks",
+        "email": "audreysacks@gmail.com",
+        "phone": "456-2354",
+        "position": "HR Manager",
+        "status": "online",
+        "photoUrl": "/img/avatars/audrey.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Kristie Brooks",
+        "email": "kristibr@gmail.com",
+        "phone": "123-4898",
+        "position": "Designer",
+        "status": "busy",
+        "photoUrl": "/img/avatars/kristie.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Alec Stax",
+        "email": "alectax@gmail.com",
+        "phone": "735-7654",
+        "position": "Designer",
+        "status": "online",
+        "photoUrl": "/img/avatars/alec.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Jack Mc Mahon",
+        "email": "jackmm@gmail.com",
+        "phone": "461-7654",
+        "position": "Frontend Developer",
+        "status": "online",
+        "photoUrl": "/img/avatars/jack.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Madeline Griffith",
+        "email": "madelineg@gmail.com",
+        "phone": "354-2565",
+        "position": "head of Marketing",
+        "status": "away",
+        "photoUrl": "/img/avatars/madeline.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Eddie Spitts",
+        "email": "eddiespitts@gmail.com",
+        "phone": "789-1568",
+        "position": "Backend Developer",
+        "status": "online",
+        "photoUrl": "/img/avatars/eddie.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Jim Stockton",
+        "email": "jimstockton@gmail.com",
+        "phone": "816-4598",
+        "position": "Backend Developer",
+        "status": "online",
+        "photoUrl": "/img/avatars/jim.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Tara Frost",
+        "email": "tarafrost@gmail.com",
+        "phone": "259-7894",
+        "position": "Accountant",
+        "status": "busy",
+        "photoUrl": "/img/avatars/tara.jpg"
+    }
+]

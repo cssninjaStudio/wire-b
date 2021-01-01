@@ -1,0 +1,22 @@
+{
+    "participants": [
+        {
+            "id": 6,
+            "name": "Kristie Brooks",
+            "email": "kristibr@gmail.com",
+            "phone": "123-4898",
+            "position": "Designer",
+            "status": "busy",
+            "photoUrl": "/img/avatars/kristie.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        }
+    ]
+}

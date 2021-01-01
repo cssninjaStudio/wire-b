@@ -1,0 +1,84 @@
+/*! _loader.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Loader
+========================================================================== */
+
+$grey-lighter: hsl(0, 0%, 86%) !default;
+$radius-rounded: 290486px !default;
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@mixin loader {
+    animation: spinAround 500ms infinite linear;
+    border: 2px solid $grey-lighter;
+    border-radius: $radius-rounded;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1em;
+    position: relative;
+    width: 1em;
+}
+
+%loader {
+    @include loader;
+}
+
+.loader {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+
+    &.loader-3 {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &.loader-4 {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    &:after {
+        @extend %loader;
+
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 4;
+    }
+}
+
+.loader-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+
+    &.is-active {
+        opacity: 1;
+
+        //pointer-events: all;
+   
+    }
+}

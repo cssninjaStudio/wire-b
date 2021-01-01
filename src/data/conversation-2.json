@@ -1,0 +1,22 @@
+{
+    "participants": [
+        {
+            "id": 5,
+            "name": "Audrey Sacks",
+            "email": "audreysacks@gmail.com",
+            "phone": "456-2354",
+            "position": "HR Manager",
+            "status": "online",
+            "photoUrl": "/img/avatars/audrey.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+<div class="chat-nav" :class="{
+        'is-mobile-active': layoutMobileActive,
+        '': !layoutMobileActive
+    }">
+    <div class="nav-start">
+
+        <div class="nav-item burger-wrapper">
+            <button class="menu-icon v-5" @click="toggleMobileLayout()" class="menu-icon v-4" :class="{
+                    'is-open': layoutMobileActive,
+                    '': !layoutMobileActive
+                }">
+                <span></span>
+            </button>
+        </div>
+
+        <div class="recipient-block">
+            <div id="navbar-participants" class="avatars">
+                <div class="avatar-container">
+                    <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/mike.jpg" alt="">
+                </div>
+                <div class="avatar-container">
+                    <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
+                </div>
+                <div class="avatar-container">
+                    <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/ben.jpg" alt="">
+                </div>
+                <div class="avatar-container">
+                    <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/walter.jpg" alt="">
+                </div>
+            </div>
+            <div class="username">
+                <span id="navbar-participant-name">Mike Baggio</span>
+                <span>and <var id="navbar-participants-count">3</var> more</span>
+            </div>
+        </div>
+    </div>
+    <div class="nav-end">
+
+        <div class="toggle-wrapper">
+            <div class="ninja-toggle">
+                <input @click="toggleTheme()" id="theme-toggle" type="checkbox">
+                <label for="theme-toggle" class="no-margin">
+                    <span class="track">
+                        <span class="track-inner"></span>
+                        <span class="track-knob">
+                            <i class="sun" data-feather="sun"></i>
+                            <i class="moon" data-feather="moon"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- More dropdown -->
+        {{> chat-menu-dropdown}}
+
+        <!-- Settings icon dropdown -->
+        {{> settings-dropdown}}
+
+        <div class="chat-search">
+            <div class="form-group has-icon">
+                <input type="text" class="form-control" placeholder="Search messages">
+                <div class="form-icon">
+                    <i data-feather="search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-nav-item is-spacer is-hidden-mobile"></div>
+
+        <!-- User dropdown -->
+        {{> chat-user-dropdown}}
+
+        <div class="nav-item burger-wrapper-right">
+            <button @click="toggleMobileSidebar()" class="menu-icon v-4" :class="{
+                    'is-open': sidebarMobileOpen,
+                    '': !sidebarMobileOpen
+                }">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</div>

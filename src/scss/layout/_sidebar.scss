@@ -1,0 +1,156 @@
+/*! _sidebar.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Sidebar
+========================================================================== */
+
+.users-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 10;
+    background: $white;
+    transition: all .3s;
+
+    .header-item, .user-item, .footer-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .header-item {
+        img {
+            height: 28px !important;
+            width: 28px !important;
+        }
+    }
+
+    .conversations-list {
+        height: calc(100% - 120px);
+        overflow-y: auto;
+    }
+
+    .user-item {
+        cursor: pointer;
+
+        &.is-active {
+            background: $fade-grey;
+
+            .user-status, .conversation-count {
+                border-color: $fade-grey !important;
+            }
+        }
+
+        &:hover {
+            background: lighten($fade-grey, 3%);
+        }
+
+        > * {
+            pointer-events: none;
+        }
+
+        .avatar-container {
+            position: relative;
+            height: 38px;
+            width: 38px;
+            border: 2px solid transparent;
+
+            .user-avatar {
+                border-radius: 50%;
+            }
+
+            .conversation-count {
+                position: absolute;
+                bottom: -2px;
+                right: -3px;
+                height: 16px;
+                width: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: $secondary;
+                border: 1.2px solid $white;
+
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: .45rem;
+                    font-weight: 600;
+                    color: $white;
+                }
+            }
+
+            .user-status {
+                position: absolute;
+                top: -3px;
+                right: -1px;
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                background: $muted-grey;
+                border: 2px solid $white;
+
+                &.is-online {
+                    background: $green;
+                }
+
+                &.is-busy {
+                    background: $orange;
+                }
+
+                &.is-away {
+                    background: $red;
+                }
+            }
+        }
+    }
+
+    .footer-item {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .add-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 42px;
+            min-height: 42px;
+            width: 42px;
+            min-width: 42px;
+            margin: 0 auto;
+            border: 1.8px dashed $placeholder;
+            border-radius: 50%;
+            background: $white;
+            transition: all .3s;
+            cursor: pointer;
+
+            &:hover {
+                background: $secondary;
+                border: 1.8px solid $secondary;
+                box-shadow: $secondary-box-shadow;
+
+                i {
+                    color: $white;
+                }
+            }
+
+            i {
+                font-size: 18px;
+                color: $placeholder;
+                transition: color .3s;
+            }
+        }
+    }
+}

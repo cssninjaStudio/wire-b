@@ -1,0 +1,49 @@
+{
+    "participants": [
+        {
+            "id": 11,
+            "name": "Eddie Spitts",
+            "email": "eddiespitts@gmail.com",
+            "phone": "789-1568",
+            "position": "Backend Developer",
+            "status": "online",
+            "photoUrl": "/img/avatars/eddie.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Audrey Sacks",
+            "email": "audreysacks@gmail.com",
+            "phone": "456-2354",
+            "position": "HR Manager",
+            "status": "online",
+            "photoUrl": "/img/avatars/audrey.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Madeline Griffith",
+            "email": "madelineg@gmail.com",
+            "phone": "354-2565",
+            "position": "head of Marketing",
+            "status": "away",
+            "photoUrl": "/img/avatars/madeline.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Alec Stax",
+            "email": "alectax@gmail.com",
+            "phone": "735-7654",
+            "position": "Designer",
+            "status": "online",
+            "photoUrl": "/img/avatars/alec.jpg"
+        }
+    ]
+}

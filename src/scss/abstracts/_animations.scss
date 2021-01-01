@@ -1,0 +1,45 @@
+/*! _animations.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Animations
+========================================================================== */
+
+/* ==========================================================================
+Fade In Left
+========================================================================== */
+
+//Keyframes
+@-webkit-keyframes fadeInLeft {
+    from {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+//Settings
+.preFadeInLeft {
+    opacity: 0;
+}
+
+.fadeInLeft {
+    opacity: 0;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;    
+}

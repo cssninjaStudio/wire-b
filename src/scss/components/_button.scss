@@ -1,0 +1,44 @@
+/*! _buttons.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Button styles
+========================================================================== */
+
+button {
+    outline: none !important;
+}
+
+.btn {
+    outline: none !important;
+    font-family: $font;
+    transition: all .3s;
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &.is-loading {
+        position: relative;
+        color: transparent !important;
+
+        &:after {
+            @include loader;
+            position: absolute;
+            left: calc(50% - (1em / 2));
+            top: calc(50% - (1em / 2));
+            position: absolute !important;
+        }
+
+        span {
+            color: transparent !important;
+        }
+
+        svg {
+            opacity: 0 !important;
+        }
+    }
+
+    &.btn-primary {
+        color: $white;
+    }
+}

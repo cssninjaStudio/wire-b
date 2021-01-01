@@ -1,0 +1,74 @@
+/*! _helpers.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Helpers
+========================================================================== */
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.container {
+  max-width: 1140px; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 15px; /* 3 */
+  padding-right: 15px; /* 3 */
+  width: 100%; /* 1 */
+ }
+
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.rounded {
+  overflow: hidden;
+}
+
+.rounded-bottom-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+
+//Scrollbar
+.has-slimscroll {
+  &::-webkit-scrollbar {
+      width: 6px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      border-radius: 10px !important;
+      background: rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: default !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}

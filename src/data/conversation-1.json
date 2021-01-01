@@ -1,0 +1,40 @@
+{
+    "participants": [
+        {
+            "id": 1,
+            "name": "Mike Baggio",
+            "email": "mikebaggio@gmail.com",
+            "phone": "555-1212",
+            "position": "Software Engineer",
+            "status": "online",
+            "photoUrl": "/img/avatars/mike.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Helen Miller",
+            "email": "helenmiller@gmail.com",
+            "phone": "489-1212",
+            "position": "Sales Manager",
+            "status": "busy",
+            "photoUrl": "/img/avatars/helen.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Ben Walsh",
+            "email": "benwalsh@gmail.com",
+            "phone": "778-5565",
+            "position": "Software Engineer",
+            "status": "online",
+            "photoUrl": "/img/avatars/ben.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Walter Grey",
+            "email": "wgrey@gmail.com",
+            "phone": "456-7865",
+            "position": "Solution Architect",
+            "status": "away",
+            "photoUrl": "/img/avatars/walter.jpg"
+        }
+    ]
+}

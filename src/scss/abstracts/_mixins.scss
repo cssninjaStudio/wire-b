@@ -1,0 +1,45 @@
+
+/*! _mixins.scss | CSS Ninja 2020-2021 */
+
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+    @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+//Context selector
+//@param {String} $context
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+
+//Font smoothing
+@mixin font-smoothing($value: false) {
+    @if $value {
+      -webkit-font-smoothing:  antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+      -webkit-font-smoothing:  subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
+    }
+  }
+  
