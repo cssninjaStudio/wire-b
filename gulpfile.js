@@ -164,6 +164,7 @@ const buildTasks = [
   devClean, // Clean Dist Folder
   resetPages,
   parallel(
+    copyData, 
     concatCssPlugins, 
     compileSCSS, 
     javascriptBuild, 
