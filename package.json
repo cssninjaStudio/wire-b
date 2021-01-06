@@ -1,6 +1,6 @@
 {
   "name": "wire-b",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Wire B - Bootstrap 5 chat UI",
   "main": "gulpfile.js",
   "dependencies": {
