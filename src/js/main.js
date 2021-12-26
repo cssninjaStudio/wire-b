@@ -1,26 +1,38 @@
 "use strict";
 
-import './store/store';
-import 'alpinejs';
-import { env } from './libs/utils/constants';
-import { switchDemoImages, insertBgImages } from './libs/utils/utils';
-import { initChat } from './libs/chat/chat';
-const feather = require('feather-icons');
+//Alpine JS and plugins import
+import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
+import Fern from "@ryangjchandler/fern";
 
-window.initChat = initChat;
+window.Alpine = Alpine;
+//Init intersect plugin
+Alpine.plugin(intersect);
+//Init Fern plugin
+Alpine.plugin(Fern);
+//Init Fern persisted store
+Alpine.persistedStore("app", {
+  isLoggedIn: false,
+});
+//Start Alpine JS
+Alpine.start();
+
+import { env } from "./libs/utils/constants";
+import { switchDemoImages, insertBgImages } from "./libs/utils/utils";
+import "./libs/chat";
+const feather = require("feather-icons");
+
+
 
 document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
+  if (document.readyState == "complete") {
+    //Switch demo images
+    const changeImages = switchDemoImages(env);
 
-        //Switch demo images
-        const changeImages = switchDemoImages(env);
+    //Switch backgrounds
+    const changeBackgrounds = insertBgImages();
 
-        //Switch backgrounds
-        const changeBackgrounds = insertBgImages();
-
-        //Feather Icons
-        const featherIcons = feather.replace();
-        
-    }
-}
-
+    //Feather Icons
+    const featherIcons = feather.replace();
+  }
+};

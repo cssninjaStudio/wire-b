@@ -3,9 +3,8 @@ const del = require('del');
 const options = require("./config");
 const browserSync = require('browser-sync').create();
 
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const bourbon = require('node-bourbon').includePaths;
-const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
