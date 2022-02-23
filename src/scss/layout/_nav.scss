@@ -95,6 +95,11 @@ Chat Nav
             align-items: center;
             height: 32px;
             width: 32px;
+
+            .dropdown-menu {
+                top: 32px;
+                right: 0;
+            }
         }
 
         .burger-wrapper-right {

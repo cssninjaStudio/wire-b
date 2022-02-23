@@ -470,6 +470,10 @@ Chat Body
                 position: absolute;
                 top: 0;
                 left: 0;
+
+                .dropdown-menu {
+                    top: -285px;
+                }
             }
 
             .add-button {

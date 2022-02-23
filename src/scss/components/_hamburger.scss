@@ -4,8 +4,11 @@
 Hamburger icon
 ========================================================================== */
 
+@use "sass:math";
+
 $menu-icon-size: 1.6rem;
 $menu-icon-dash-width: 0.75em; //em(4.5rem, 6rem)
+$menu-icon-dash-width-sliced: 0.35em;
 $menu-icon-dash-height: 0.05em; //em(0.3rem, 6rem)
 $menu-icon-dash-gutter: $menu-icon-dash-height * 5;
 $menu-icon-dash-color: $muted-grey;
@@ -15,14 +18,14 @@ $menu-icon-dash-border-radius: 0;
     display: block;
     position: absolute;
     top: 50%;
-    left: (1em - $menu-icon-dash-width) / 2; // center X
+    left: math.div((1em - $menu-icon-dash-width), 2); // center X
     background-color: $menu-icon-dash-color;
     width: $menu-icon-dash-width;
     height: $menu-icon-dash-height;
     border-radius: $menu-icon-dash-border-radius;
-}
-
-.menu-icon {
+  }
+  
+  .menu-icon {
     font-size: $menu-icon-size;
     width: 1em;
     height: 1em;
@@ -36,221 +39,239 @@ $menu-icon-dash-border-radius: 0;
     -webkit-touch-callout: none;
     touch-action: manipulation;
     cursor: pointer;
-
-    span {
-        @extend %menu-dash;
-
-        margin-top: $menu-icon-dash-height / -2;
+  
+    > * {
+      pointer-events: none !important;
     }
-
+  
+    span {
+      @extend %menu-dash;
+  
+      margin-top: math.div($menu-icon-dash-height, 2);
+    }
+  
     &:before {
-        content: "";
-
-        @extend %menu-dash;
-
-        margin-top: -$menu-icon-dash-gutter + $menu-icon-dash-height / -2;
+      content: "";
+  
+      @extend %menu-dash;
+  
+      width: $menu-icon-dash-width-sliced;
+      margin-top: -$menu-icon-dash-gutter + math.div($menu-icon-dash-height, 2);
     }
-
+  
     &:after {
-        content: "";
-
-        @extend %menu-dash;
-
-        margin-top: $menu-icon-dash-gutter + $menu-icon-dash-height / -2;
+      content: "";
+  
+      @extend %menu-dash;
+  
+      margin-top: $menu-icon-dash-gutter + math.div($menu-icon-dash-height, -2);
     }
-}
-
-.v-1 {
-    &:before, &:after, span {
-        transition: 0.25s ease-in-out;
-    }
-
-    &.is-open {
-        &:before {
-            transform: rotate(135deg);
-            margin-top: $menu-icon-dash-height / -2;
-        }
-
-        &:after {
-            transform: rotate(-135deg);
-            margin-top: $menu-icon-dash-height / -2;
-        }
-
-        span {
-            opacity: 0;
-            transform: translateX(150%);
-        }
-    }
-}
-
-.v-2 {
-    &:before, &:after {
-        display: none;
-    }
-
+  }
+  
+  .v-1 {
+    &:before,
+    &:after,
     span {
-        transition: 0.25s ease;
-
-        &:before, &:after {
-            @extend %menu-dash;
-
-            content: "";
-            transition: 0.25s ease;
-            top: 0;
-            left: 0;
-        }
-
-        &:before {
-            transform: translateY(-$menu-icon-dash-gutter);
-        }
-
-        &:after {
-            transform: translateY($menu-icon-dash-gutter);
-        }
+      transition: 0.25s ease-in-out;
     }
-
+  
     &.is-open {
-        span {
-            transform: rotate(45deg);
-
-            &:before, &:after {
-                transform: rotate(90deg);
-            }
-        }
+      &:before {
+        transform: rotate(135deg);
+        margin-top: math.div($menu-icon-dash-height, -2);
+      }
+  
+      &:after {
+        transform: rotate(-135deg);
+        margin-top: math.div($menu-icon-dash-height, -2);
+      }
+  
+      span {
+        opacity: 0;
+        transform: translateX(150%);
+      }
     }
-}
-
-.v-3 {
-    &:before, &:after {
+  }
+  
+  .v-2 {
+    &:before,
+    &:after {
+      display: none;
+    }
+  
+    span {
+      transition: 0.25s ease;
+  
+      &:before,
+      &:after {
+        @extend %menu-dash;
+  
+        content: "";
+        transition: 0.25s ease;
+        top: 0;
+        left: 0;
+      }
+  
+      &:before {
+        transform: translateY(-$menu-icon-dash-gutter);
+      }
+  
+      &:after {
+        transform: translateY($menu-icon-dash-gutter);
+      }
+    }
+  
+    &.is-open {
+      span {
+        transform: rotate(45deg);
+  
+        &:before,
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  
+  .v-3 {
+    &:before,
+    &:after {
+      transition: 0.2s ease 0.2s;
+    }
+  
+    &:after {
+      left: auto;
+      right: math.div((1em - $menu-icon-dash-width), 2);
+    }
+  
+    span {
+      transition: 0.2s;
+  
+      &:before {
+        @extend %menu-dash;
+  
+        content: "";
+        transition: inherit;
+        left: 0;
+        top: 0;
+      }
+    }
+  
+    &.is-open {
+      &:before,
+      &:after {
+        transition: 0.2s ease;
+        width: 0;
+      }
+  
+      span {
+        transform: rotate(45deg);
         transition: 0.2s ease 0.2s;
+  
+        &:before {
+          transform: rotate(-90deg);
+        }
+      }
     }
-
+  }
+  
+  .v-4 {
+    &:before,
     &:after {
+      display: none;
+    }
+  
+    span {
+      transition: 0.25s ease;
+  
+      &:before,
+      &:after {
+        @extend %menu-dash;
+  
+        content: "";
+        top: 0;
+        left: 0;
+        transition: inherit;
+        margin: 0;
+      }
+  
+      &:before {
+        transform: translateY(-$menu-icon-dash-gutter);
+      }
+  
+      &:after {
+        transform: translateY($menu-icon-dash-gutter);
+      }
+    }
+  
+    &.is-open {
+      span {
+        transform: rotate(180deg);
+  
+        &:before,
+        &:after {
+          width: math.div($menu-icon-dash-width, 2);
+          left: 0.02em;
+        }
+  
+        &:before {
+          transform: rotate(-45deg) translateY(-0.17em);
+        }
+  
+        &:after {
+          transform: rotate(45deg) translateY(0.17em);
+        }
+      }
+    }
+  }
+  
+  .v-5 {
+    &:before,
+    &:after {
+      display: none;
+    }
+  
+    span {
+      transition: 0.25s ease;
+  
+      &:before,
+      &:after {
+        @extend %menu-dash;
+  
+        content: "";
+        top: 0;
+        right: 0;
         left: auto;
-        right: (1em - $menu-icon-dash-width) / 2;
+        transition: inherit;
+        margin: 0;
+      }
+  
+      &:before {
+        transform: translateY(-$menu-icon-dash-gutter);
+      }
+  
+      &:after {
+        transform: translateY($menu-icon-dash-gutter);
+      }
     }
-
-    span {
-        transition: 0.2s;
-
-        &:before {
-            @extend %menu-dash;
-
-            content: "";
-            transition: inherit;
-            left: 0;
-            top: 0;
-        }
-    }
-
+  
     &.is-open {
-        &:before, &:after {
-            transition: 0.2s ease;
-            width: 0;
-        }
-
-        span {
-            transform: rotate(45deg);
-            transition: 0.2s ease 0.2s;
-
-            &:before {
-                transform: rotate(-90deg);
-            }
-        }
-    }
-}
-
-.v-4 {
-    &:before, &:after {
-        display: none;
-    }
-
-    span {
-        transition: 0.25s ease;
-
-        &:before, &:after {
-            @extend %menu-dash;
-
-            content: "";
-            top: 0;
-            left: 0;
-            transition: inherit;
-            margin: 0;
-        }
-
-        &:before {
-            transform: translateY(-$menu-icon-dash-gutter);
-        }
-
+      span {
+        transform: rotate(-180deg);
+  
+        &:before,
         &:after {
-            transform: translateY($menu-icon-dash-gutter);
+          width: math.div($menu-icon-dash-width, 2);
+          right: 0.02em;
         }
-    }
-
-    &.is-open {
-        span {
-            transform: rotate(180deg);
-
-            &:before, &:after {
-                width: $menu-icon-dash-width / 2;
-                left: 0.02em;
-            }
-
-            &:before {
-                transform: rotate(-45deg) translateY(-0.17em);
-            }
-
-            &:after {
-                transform: rotate(45deg) translateY(0.17em);
-            }
-        }
-    }
-}
-
-.v-5 {
-    &:before, &:after {
-        display: none;
-    }
-
-    span {
-        transition: 0.25s ease;
-
-        &:before, &:after {
-            @extend %menu-dash;
-
-            content: "";
-            top: 0;
-            right: 0;
-            left: auto;
-            transition: inherit;
-            margin: 0;
-        }
-
+  
         &:before {
-            transform: translateY(-$menu-icon-dash-gutter);
+          transform: rotate(-45deg) translateY(0.17em);
         }
-
+  
         &:after {
-            transform: translateY($menu-icon-dash-gutter);
+          transform: rotate(45deg) translateY(-0.17em);
         }
+      }
     }
-
-    &.is-open {
-        span {
-            transform: rotate(-180deg);
-
-            &:before, &:after {
-                width: $menu-icon-dash-width / 2;
-                right: 0.02em;
-            }
-
-            &:before {
-                transform: rotate(-45deg) translateY(0.17em);
-            }
-
-            &:after {
-                transform: rotate(45deg) translateY(-0.17em);
-            }
-        }
-    }
-}
+  }
