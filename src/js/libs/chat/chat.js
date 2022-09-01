@@ -113,7 +113,7 @@ export function initChat() {
               let template = `
                     <div class="participant-item is-owner">
                         <div class="avatar-container">
-                            <img src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                            <img src="${data.participants[i].photoUrl}" alt="">
                             <div class="user-status is-${data.participants[i].status}"></div>
                         </div>
                         <div class="meta">
@@ -141,7 +141,7 @@ export function initChat() {
 
               navbarParticipants.innerHTML += `
                     <div class="avatar-container">
-                        <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                        <img class="user-avatar" src="${data.participants[i].photoUrl}" alt="">
                     </div>
                 `;
               navbarParticipantName.innerHTML = data.participants[i].name;
@@ -149,7 +149,7 @@ export function initChat() {
               let template = `
                         <div class="participant-item is-participant">
                             <div class="avatar-container">
-                                <img src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                                <img src="${data.participants[i].photoUrl}" alt="">
                                 <div class="user-status is-${data.participants[i].status}"></div>
                             </div>
                             <div class="meta">
@@ -177,7 +177,7 @@ export function initChat() {
               if (i < 6) {
                 navbarParticipants.innerHTML += `
                     <div class="avatar-container">
-                        <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                        <img class="user-avatar" src="${data.participants[i].photoUrl}" alt="">
                     </div>
                 `;
               }
@@ -186,9 +186,6 @@ export function initChat() {
             if (i === data.participants.length - 1) {
               //Set navbar count
               navbarParticipantCount.innerHTML = data.participants.length - 1;
-
-              //Change demo images
-              switchDemoImages(env);
 
               //Simulate loading
               setTimeout(() => {
