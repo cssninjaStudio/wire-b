@@ -3,7 +3,6 @@ import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import bourbon from "node-bourbon";
 import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import panini from "panini";
@@ -29,24 +28,23 @@ const sass = gulpSass(sassCompiler);
 //Load Previews on Browser on dev
 function livePreview(done) {
   browserSync.init({
-    server: {
-      baseDir: options.paths.dist.base
-    },
-    port: options.config.port || 5000
+    server: "./dist",
+    ui: false,
+    open: false,
   });
   done();
 }
 
 //Copy latest installed Bulma
 function setupBulma() {
-  console.log("\n\t" + logSymbols.info, "Installing Bulma Files..\n");
+  console.log(logSymbols.info, "Installing Bulma Files..");
   return src([nodepath + 'bulma/*.sass', nodepath + 'bulma/**/*.sass'])
     .pipe(dest('src/sass/'));
 }
 
 //Compile Scss code
 function compileSCSS() {
-  console.log("\n\t" + logSymbols.info, "Compiling App SCSS..\n");
+  console.log(logSymbols.info, "Compiling App SCSS..");
   return src(['src/scss/main.scss'])
     .pipe(sass({
       outputStyle: 'compressed',
@@ -61,7 +59,7 @@ function compileSCSS() {
 
 //Compile HTML partials with Panini
 function compileHTML() {
-  console.log("\n\t" + logSymbols.info, "Compiling HTML..\n");
+  console.log(logSymbols.info, "Compiling HTML..");
   panini.refresh();
   return src('src/pages/**/*.html')
     .pipe(panini({
@@ -77,7 +75,7 @@ function compileHTML() {
 
 //Concat CSS Plugins
 function concatCssPlugins() {
-  console.log("\n\t" + logSymbols.info, "Compiling Plugin styles..\n");
+  console.log(logSymbols.info, "Compiling Plugin styles..");
   return src([
     nodepath + 'simplebar/dist/simplebar.min.css',
     nodepath + 'plyr/dist/plyr.css',
@@ -94,14 +92,14 @@ function concatCssPlugins() {
 
 //Reset Panini Cache
 function resetPages(done) {
-  console.log("\n\t" + logSymbols.info, "Clearing Panini Cache..\n");
+  console.log(logSymbols.info, "Clearing Panini Cache..");
   panini.refresh();
   done();
 }
 
 //Triggers Browser reload
 function previewReload(done) {
-  console.log("\n\t" + logSymbols.info, "Reloading Browser Preview.\n");
+  console.log(logSymbols.info, "Reloading Browser Preview.");
   browserSync.reload();
   done();
 }
@@ -136,7 +134,7 @@ function javascriptBuild() {
 
 //Copy data files
 function copyData() {
-  console.log("\n\t" + logSymbols.info, "Copying data files..\n");
+  console.log(logSymbols.info, "Copying data files..");
   return src([
     'src/data/**/*',
   ])
@@ -151,11 +149,11 @@ function watchFiles() {
   watch(['src/scss/**/*', 'src/scss/*'], compileSCSS);
   watch(`${options.paths.src.js}/**/*.js`, series(javascriptBuild, previewReload));
   watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
-  console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
+  console.log(logSymbols.info, "Watching for Changes..");
 }
 
 function devClean() {
-  console.log("\n\t" + logSymbols.info, "Cleaning dist folder for fresh start.\n");
+  console.log(logSymbols.info, "Cleaning dist folder for fresh start.");
   return del([options.paths.dist.base]);
 }
 

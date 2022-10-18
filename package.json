@@ -1,23 +1,32 @@
 {
   "name": "wire-b",
   "version": "2.0.2",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE.md",
   "description": "Wire B - Bootstrap 5 chat UI",
-  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "@joeattardi/emoji-button": "4.6.0",
-    "@alpinejs/intersect": "^3.9.0",
-    "@alpinejs/persist": "^3.7.1",
-    "@ryangjchandler/fern": "^0.1.0",
-    "alpinejs": "^3.9.0",
-    "bootstrap": "^5.1.3",
-    "codemirror": "^5.58.3",
-    "feather-icons": "^4.24.0",
-    "ionicons": "^5.2.3",
-    "js-datepicker": "^5.16.0",
-    "notyf": "^3.9.0",
-    "plyr": "^3.5.6",
-    "postcss": "^8.1.6",
-    "simplebar": "^5.3.3"
+    "@alpinejs/intersect": "3.9.0",
+    "@alpinejs/persist": "3.7.1",
+    "@ryangjchandler/fern": "0.1.0",
+    "alpinejs": "3.9.0",
+    "bootstrap": "5.1.3",
+    "codemirror": "5.58.3",
+    "feather-icons": "4.24.0",
+    "ionicons": "5.2.3",
+    "js-datepicker": "5.16.0",
+    "notyf": "3.9.0",
+    "plyr": "3.5.6",
+    "postcss": "8.1.6",
+    "simplebar": "5.3.3"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
@@ -46,28 +55,5 @@
     "panini": "1.7.2",
     "sass": "1.39.2",
     "vinyl-source-stream": "2.0.0"
-  },
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/"
-  },
-  "type": "module",
-  "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
-  "keywords": [
-    "gulp",
-    "gulp4",
-    "bulma",
-    "bulmacss",
-    "sass"
-  ],
-  "author": "Css Ninja",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cssninjaStudio/wire-b"
-  },
-  "homepage": "https://github.com/cssninjaStudio/wire-b"
+  }
 }

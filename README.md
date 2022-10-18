@@ -1,6 +1,6 @@
 # 👋 Wire B
 
-[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://discord.cssninja.io/)
+[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
 
 > Wire B is a chat app UI built by [cssninjaStudio](https://cssninja.io).
 
@@ -13,31 +13,48 @@ Wire B is built with [Bootstrap](https://getbootstrap.com/) and [Alpine JS](http
 
 ## 👍 Features
 
-- Gulp 4 and nodejs 12.20.0 to 16.0.0
+- Gulp 4 and Node.js 16/18+
 - Bootstrap 5x
 - ES6 support
 - Alpine v3
 
 ## 👌 Usage
 
-1. Install Dev Depedencies
+1. enable pnpm with corepack
 
-```sh
-yarn install
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
 ```
 
-2. To start development server
+> _corepack is installed with Node.js from **v16.13.x**, if your version is below, install it with: `npm install -g corepack`, or upgrade Node.js_ 
 
-```sh
-yarn dev
+2. Install depedencies
+
+```bash
+pnpm i
 ```
 
-3. Build for production
+3. To start development server
 
-```sh
-# build the dist folder
-yarn build
+```bash
+pnpm dev
 ```
+
+## 💡 What to do next ?
+
+Our online documentation is a great place to learn how to use Bulkit.
+We try to keep it mostly up to date, so you can always find the latest information.
+
+> We also have a great [discord community](https://discord.cssninja.io/) where you can ask questions and show your work.
+
+### [Wire-B on docs.cssninja.io](https://docs.cssninja.io/gulp-alpine?utm_source=readme&utm_medium=wire-b)
+
+- [Getting started](https://docs.cssninja.io/gulp-alpine/documentation/getting-started.html?utm_source=readme&utm_medium=wire-b)
+- [Template Highlights](https://docs.cssninja.io/gulp-alpine/documentation/template-highlights.html?utm_source=readme&utm_medium=wire-b)
+- [Template structure](https://docs.cssninja.io/gulp-alpine/documentation/template-structure.html?utm_source=readme&utm_medium=wire-b)
+- [Working with Gulp](https://docs.cssninja.io/gulp-alpine/documentation/working-with-gulp.html?utm_source=readme&utm_medium=wire-b)
+- [Customer support](https://docs.cssninja.io/gulp-alpine/documentation/customer-support.html?utm_source=readme&utm_medium=wire-b)
 
 ## 🍔 Issues
 
