@@ -7,7 +7,7 @@ import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import panini from "panini";
 import sassCompiler from "sass";
-import del from "del";
+import { deleteAsync } from "del";
 import browserify from "browserify";
 import babelify from "babelify";
 import source from "vinyl-source-stream";
@@ -154,7 +154,7 @@ function watchFiles() {
 
 function devClean() {
   console.log(logSymbols.info, "Cleaning dist folder for fresh start.");
-  return del([options.paths.dist.base]);
+  return deleteAsync([options.paths.dist.base]);
 }
 
 const buildTasks = [
