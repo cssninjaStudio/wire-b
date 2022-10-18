@@ -10,6 +10,9 @@ COPY pnpm-lock.yaml ./
 COPY .npmrc ./
 RUN pnpm install --frozen-lockfile
 
+# Copy required file to perfom pnpm build
+COPY . .
+RUN pnpm build
 
 FROM bitnami/nginx:1.21 AS prod
 WORKDIR /app
