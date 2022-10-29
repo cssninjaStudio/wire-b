@@ -1,156 +1,169 @@
-<div x-show="activeConversation === 'conversation-4'" id="conversation-4" class="chat-body-inner is-multiple has-slimscroll">
-    <div class="date-divider">
-        <hr class="date-divider-line">
-        <span class="date-divider-text">Today</span>
+<div
+  x-show="activeConversation === 'conversation-4'"
+  id="conversation-4"
+  class="chat-body-inner is-multiple has-slimscroll"
+>
+  <div class="date-divider">
+    <hr class="date-divider-line" />
+    <span class="date-divider-text">Today</span>
+  </div>
+
+  <div x-show="isConversationLoading" class="shadow-dom">
+    <div class="chat-message is-received is-placeloader">
+      <div class="img loads"></div>
+      <div class="message-block">
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+      </div>
     </div>
 
-    <div x-show="isConversationLoading" class="shadow-dom">
-        <div class="chat-message is-received is-placeloader">
-            <div class="img loads"></div>
-            <div class="message-block">
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-            </div>
-        </div>
-    
-        <div class="chat-message is-received is-placeloader">
-            <div class="img loads"></div>
-            <div class="message-block">
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-            </div>
-        </div>
-    
-        <div class="chat-message is-sent is-placeloader">
-            <div class="img loads"></div>
-            <div class="message-block">
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-            </div>
-        </div>
-    
-        <div class="chat-message is-received is-placeloader">
-            <div class="img loads"></div>
-            <div class="message-block">
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-                <div class="content-shape loads"></div>
-            </div>
-        </div>
+    <div class="chat-message is-received is-placeloader">
+      <div class="img loads"></div>
+      <div class="message-block">
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+      </div>
     </div>
 
-    <div x-show="!isConversationLoading" class="true-dom">
-        <div class="chat-message is-sent">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
-            <div class="message-block">
-                <span>12:34pm</span>
-                <div class="message-text">Did anyone review the latest UI stuff from the San Francisco team?</div>
-            </div>
-        </div>
-    
-        <div class="chat-message is-sent">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
-            <div class="message-block">
-                <span>12:32pm</span>
-                <div class="message-text">Iam not sure if Ian still in the loop.</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
-    
-        <div class="chat-message is-received">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/ben.jpg" alt="">
-            <div class="message-block">
-                <span>13:09pm</span>
-                <div class="message-text">I saw some design files coming up on my inbox this morning but I didn't have time to review any of those.</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
-        <div class="chat-message is-received">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/alec.jpg" alt="">
-            <div class="message-block">
-                <span>13:11pm</span>
-                <div class="message-text">i checked some of them, I think we are still missing the mobile wireframes.</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
-        <div class="chat-message is-sent">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
-            <div class="message-block">
-                <span>13:12pm</span>
-                <div class="message-text">Can one of you two send me the files?</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
-        <div class="chat-message is-received has-reactions">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/alec.jpg" alt="">
-            <div class="message-block">
-                <span>13:17pm</span>
-                <div class="message-text">Sure, will do.</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-    
-                <!--Message reactions-->
-                <div class="reaction-counts">
-                    <div class="reaction-count">
-                        <span>👍</span>
-                        <span>2</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat-message is-received">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/walter.jpg" alt="">
-            <div class="message-block">
-                <span>13:29pm</span>
-                <div class="message-text">Iam going to need those too if you don't mind</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
-
-        <div class="chat-message is-received has-reactions">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/alec.jpg" alt="">
-            <div class="message-block">
-                <span>13:31pm</span>
-                <div class="message-text">Gotcha, will add you to the loop.</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-    
-                <!--Message reactions-->
-                <div class="reaction-counts">
-                    <div class="reaction-count">
-                        <span>👍</span>
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="chat-message is-sent">
-            <img src="https://via.placeholder.com/150x150" data-demo-src="/img/avatars/helen.jpg" alt="">
-            <div class="message-block">
-                <span>13:43pm</span>
-                <div class="message-text">Alright guys, looks like it's settled</div>
-
-                <!--Reactions buttons-->
-                {{> reactions-toolbar}}
-            </div>
-        </div>
+    <div class="chat-message is-sent is-placeloader">
+      <div class="img loads"></div>
+      <div class="message-block">
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+      </div>
     </div>
 
+    <div class="chat-message is-received is-placeloader">
+      <div class="img loads"></div>
+      <div class="message-block">
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+        <div class="content-shape loads"></div>
+      </div>
+    </div>
+  </div>
+
+  <div x-show="!isConversationLoading" class="true-dom">
+    <div class="chat-message is-sent">
+      <img src="/img/avatars/helen.jpg" alt="" />
+      <div class="message-block">
+        <span>12:34pm</span>
+        <div class="message-text">
+          Did anyone review the latest UI stuff from the San Francisco team?
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-message is-sent">
+      <img src="/img/avatars/helen.jpg" alt="" />
+      <div class="message-block">
+        <span>12:32pm</span>
+        <div class="message-text">Iam not sure if Ian still in the loop.</div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+
+    <div class="chat-message is-received">
+      <img src="/img/avatars/ben.jpg" alt="" />
+      <div class="message-block">
+        <span>13:09pm</span>
+        <div class="message-text">
+          I saw some design files coming up on my inbox this morning but I
+          didn't have time to review any of those.
+        </div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+    <div class="chat-message is-received">
+      <img src="/img/avatars/alec.jpg" alt="" />
+      <div class="message-block">
+        <span>13:11pm</span>
+        <div class="message-text">
+          i checked some of them, I think we are still missing the mobile
+          wireframes.
+        </div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+    <div class="chat-message is-sent">
+      <img src="/img/avatars/helen.jpg" alt="" />
+      <div class="message-block">
+        <span>13:12pm</span>
+        <div class="message-text">Can one of you two send me the files?</div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+    <div class="chat-message is-received has-reactions">
+      <img src="/img/avatars/alec.jpg" alt="" />
+      <div class="message-block">
+        <span>13:17pm</span>
+        <div class="message-text">Sure, will do.</div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+
+        <!--Message reactions-->
+        <div class="reaction-counts">
+          <div class="reaction-count">
+            <span>👍</span>
+            <span>2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-message is-received">
+      <img src="/img/avatars/walter.jpg" alt="" />
+      <div class="message-block">
+        <span>13:29pm</span>
+        <div class="message-text">
+          Iam going to need those too if you don't mind
+        </div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+
+    <div class="chat-message is-received has-reactions">
+      <img src="/img/avatars/alec.jpg" alt="" />
+      <div class="message-block">
+        <span>13:31pm</span>
+        <div class="message-text">Gotcha, will add you to the loop.</div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+
+        <!--Message reactions-->
+        <div class="reaction-counts">
+          <div class="reaction-count">
+            <span>👍</span>
+            <span>1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-message is-sent">
+      <img src="/img/avatars/helen.jpg" alt="" />
+      <div class="message-block">
+        <span>13:43pm</span>
+        <div class="message-text">Alright guys, looks like it's settled</div>
+
+        <!--Reactions buttons-->
+        {{> reactions-toolbar}}
+      </div>
+    </div>
+  </div>
 </div>
