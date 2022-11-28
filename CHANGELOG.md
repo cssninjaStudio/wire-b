@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/cssninjaStudio/wire-b/compare/v2.1.0...v2.1.1) (2022-10-29)
+
+
+### Features
+
+* fix separator element color ([0d6264e](https://github.com/cssninjaStudio/wire-b/commit/0d6264e1c22425eafe151379e4f442994be1fbc3))
+
 ## [2.1.0](https://github.com/cssninjaStudio/wire-b/compare/v2.0.2...v2.1.0) (2022-10-18)
 
 
