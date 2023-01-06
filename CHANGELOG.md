@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/cssninjaStudio/wire-b/compare/v2.1.2...v3.0.0) (2023-01-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from gulp to astro
+
+### Features
+
+* migrate from gulp to astro ([31fb862](https://github.com/cssninjaStudio/wire-b/commit/31fb862be33830e749ea79f67e7e64d48ec55b41))
+
 ### [2.1.2](https://github.com/cssninjaStudio/wire-b/compare/v2.1.1...v2.1.2) (2022-11-28)
 
 ### [2.1.1](https://github.com/cssninjaStudio/wire-b/compare/v2.1.0...v2.1.1) (2022-10-29)
