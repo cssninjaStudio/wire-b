@@ -1,0 +1,159 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Conversations from "../components/Conversations.astro";
+import AudreyConversation from "../components/conversations/AudreyConversation.astro";
+import BenConversation from "../components/conversations/BenConversation.astro";
+import EddieConversation from "../components/conversations/EddieConversation.astro";
+import JimConversation from "../components/conversations/JimConversation.astro";
+import KristieConversation from "../components/conversations/KristieConversation.astro";
+import MikeConversation from "../components/conversations/MikeConversation.astro";
+import TaraConversation from "../components/conversations/TaraConversation.astro";
+import WalterConversation from "../components/conversations/WalterConversation.astro";
+import ComposeDropdown from "../components/dropdowns/ComposeDropdown.astro";
+import PanelParticipants from "../components/panel/PanelParticipants.astro";
+import PanelDetails from "../components/panel/PanelDetails.astro";
+import PanelActivity from "../components/panel/PanelActivity.astro";
+import ModalNewConversation from "../components/modals/ModalNewConversation.astro";
+---
+
+<div class="chat-wrapper">
+  <div class="chat-inner">
+    <!-- Chat top navigation -->
+    <Navigation />
+
+    <!-- Chat sidebar -->
+    <div
+      id="chat-sidebar"
+      class="users-sidebar"
+      :class="{
+          'is-mobile-active': layoutMobileActive,
+          '': !layoutMobileActive
+      }"
+    >
+      <!-- Header -->
+      <a href="/" class="header-item">
+        <img src="/img/logo/wire.svg" alt="" />
+      </a>
+      <!-- User list -->
+      <div class="conversations-list has-slimscroll-xs">
+        <Conversations />
+      </div>
+      <!-- Add Conversation -->
+      <div class="footer-item">
+        <div @click="toggleNewConversationModal()" class="add-button">
+          <i class="material-icons">add</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat body -->
+    <div
+      id="chat-body"
+      class="chat-body"
+      :class="{
+              'is-opened': chatBodyOpened,
+              '': !chatBodyOpened,
+              'is-mobile-active': layoutMobileActive,
+              '': !layoutMobileActive
+          }"
+    >
+      <!-- Conversation with Mike -->
+      <MikeConversation />
+
+      <!-- Conversation with Audrey -->
+      <AudreyConversation />
+
+      <!-- Conversation with Kristie -->
+      <KristieConversation />
+
+      <!-- Conversation with Ben -->
+      <BenConversation />
+
+      <!-- Conversation with Eddie -->
+      <EddieConversation />
+
+      <!-- Conversation with Walter -->
+      <WalterConversation />
+
+      <!-- Conversation with Jim -->
+      <JimConversation />
+
+      <!-- Conversation with Tara -->
+      <TaraConversation />
+
+      <!-- Compose message area -->
+      <div class="chat-action">
+        <div class="chat-action-inner">
+          <div id="message-input-wrapper" class="control">
+            <textarea
+              id="message-input"
+              class="form-control comment-textarea"
+              rows="1"></textarea>
+            <ComposeDropdown />
+            <div class="toolbar">
+              <button id="emoji-picker-button" class="btn btn-emoji">
+                <i class="iconify" data-icon="lucide:smile"></i>
+              </button>
+              <button class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-border"></div>
+    </div>
+
+    <div
+      id="chat-panel"
+      class="chat-panel"
+      :class="{
+          'is-opened': chatBodyOpened,
+          '': !chatBodyOpened,
+          'is-mobile-opened': sidebarMobileOpen,
+          '': !sidebarMobileOpen
+      }"
+    >
+      <div class="panel-inner">
+        <div class="panel-header">
+          <div class="nav">
+            <a
+              @click="switchPanelTabs($event)"
+              class="nav-link"
+              data-panel="participants-tab"
+              :class="{
+                    'active': activePanelTab === 'participants-tab',
+                    '': activePanelTab != 'participants-tab'
+                }"
+              >People</a
+            >
+            <a
+              @click="switchPanelTabs($event)"
+              class="nav-link"
+              data-panel="activity-tab"
+              :class="{
+                    'active': activePanelTab === 'activity-tab',
+                    '': activePanelTab != 'activity-tab'
+                }"
+              >Activity</a
+            >
+            <div class="nav-naver"></div>
+          </div>
+          <div @click="closeChatPanel()" class="panel-close">
+            <i class="material-icons">close</i>
+          </div>
+        </div>
+
+        <!-- People tab -->
+        <PanelParticipants />
+
+        <!-- Activity tab -->
+        <PanelActivity />
+
+        <!-- User details -->
+        <PanelDetails />
+      </div>
+    </div>
+  </div>
+
+  <ModalNewConversation />
+</div>

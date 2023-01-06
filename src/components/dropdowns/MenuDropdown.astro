@@ -1,0 +1,69 @@
+<div
+  x-ref="menudrop"
+  @click.away="$refs.menudrop.classList.remove('is-active')"
+  class="dropdown is-spaced is-right dropdown-trigger"
+>
+  <button
+    @click="$refs.menudrop.classList.add('is-active')"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <a class="chat-nav-item is-icon">
+      <i class="iconify" data-icon="lucide:more-vertical"></i>
+    </a>
+  </button>
+  <div class="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item is-header">
+        <h5>Menu</h5>
+      </div>
+      <a href="#" class="dropdown-item">
+        <div class="media">
+          <i class="iconify" data-icon="lucide:file-text"></i>
+          <div class="media-content">
+            <h3>Files</h3>
+            <small>View all your files.</small>
+          </div>
+        </div>
+      </a>
+      <a class="dropdown-item">
+        <div class="media">
+          <i class="iconify" data-icon="lucide:users"></i>
+          <div class="media-content">
+            <h3>Users</h3>
+            <small>View all users you're talking to.</small>
+          </div>
+        </div>
+      </a>
+      <hr class="dropdown-divider" />
+      <a class="dropdown-item">
+        <div class="media">
+          <i class="iconify" data-icon="lucide:gift"></i>
+          <div class="media-content">
+            <h3>Daily bonus</h3>
+            <small>Get your daily bonus.</small>
+          </div>
+        </div>
+      </a>
+      <a class="dropdown-item">
+        <div class="media">
+          <i class="iconify" data-icon="lucide:download-cloud"></i>
+          <div class="media-content">
+            <h3>Downloads</h3>
+            <small>See all your downloads.</small>
+          </div>
+        </div>
+      </a>
+      <hr class="dropdown-divider" />
+      <a class="dropdown-item">
+        <div class="media">
+          <i class="iconify" data-icon="lucide:life-buoy"></i>
+          <div class="media-content">
+            <h3>Support</h3>
+            <small>Reach our support team.</small>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

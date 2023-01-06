@@ -4,7 +4,7 @@ export function getUrlParams(param) {
   return urlParams.get(param);
 }
 
-export function insertBgImages() {
+export function switchDemoImages() {
   const targets = document.querySelectorAll("[data-background]");
 
   if (typeof targets != "undefined" && targets != null) {
