@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/cssninjaStudio/wire-b/compare/v3.0.0...v3.1.0) (2023-02-10)
+
+
+### Features
+
+* upgrade to Astro v2 ([27a9bde](https://github.com/cssninjaStudio/wire-b/commit/27a9bde06facd747bd5c7d026608a07341b29958))
+
 ## [3.0.0](https://github.com/cssninjaStudio/wire-b/compare/v2.1.2...v3.0.0) (2023-01-06)
 
 
