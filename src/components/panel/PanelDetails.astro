@@ -1,0 +1,77 @@
+<div
+  x-show="activePanelTab === 'details-tab'"
+  id="user-details"
+  class="panel-body is-user-details"
+>
+  <div class="panel-body-inner">
+    <div class="subheader">
+      <div @click="closeUserDetails()" class="action-icon panel-back">
+        <i class="material-icons">arrow_back</i>
+      </div>
+
+      <div class="action-icon ml-auto">
+        <i class="material-icons">videocam</i>
+      </div>
+      <div class="action-icon">
+        <i class="material-icons">photo_camera</i>
+      </div>
+      <div class="action-icon">
+        <i class="material-icons">mic</i>
+      </div>
+    </div>
+
+    <div class="details-avatar">
+      <img :src="detailsPhoto" src="/img/avatars/helen.jpg" alt="" />
+      <div class="call-me">
+        <i class="material-icons">phone</i>
+      </div>
+    </div>
+
+    <div class="user-meta text-center">
+      <h3 x-text="detailsUsername">Helen Miller</h3>
+      <span x-text="detailsPosition">Business Developer</span>
+    </div>
+
+    <div class="user-actions">
+      <a class="user-action">
+        <i class="iconify" data-icon="lucide:plus"></i>
+      </a>
+      <a class="user-action">
+        <i class="iconify" data-icon="lucide:phone"></i>
+      </a>
+      <a class="user-action">
+        <i class="iconify" data-icon="lucide:mail"></i>
+      </a>
+      <a class="user-action">
+        <i class="iconify" data-icon="lucide:bell"></i>
+      </a>
+    </div>
+
+    <div class="user-about">
+      <div class="about-block">
+        <div class="about-text">
+          <span>Projects</span>
+          <span><a class="is-inverted" href="#">82</a></span>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="about-text">
+          <span>Teams</span>
+          <span><a class="is-inverted" href="#">3</a></span>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="about-text">
+          <span>Posts</span>
+          <span><a class="is-inverted" href="#">42</a></span>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="about-text">
+          <span>Comments</span>
+          <span><a class="is-inverted" href="#">192</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

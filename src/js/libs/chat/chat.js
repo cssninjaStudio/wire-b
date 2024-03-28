@@ -1,6 +1,8 @@
-import { env } from "../utils/constants";
-import { switchDemoImages } from "../utils/utils";
-const feather = require("feather-icons");
+const eyeIcon = ` <svg width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 12s3-7 10-7s10 7 10 7s-3 7-10 7s-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></g></svg>`
+
+const phoneIcon = `<svg width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2a19.79 19.79 0 0 1-8.63-3.07a19.5 19.5 0 0 1-6-6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72a12.84 12.84 0 0 0 .7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45a12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`
+
+const fileIcon = `<svg width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6m-4 5H8m8 4H8m2-8H8"/></g></svg>`
 
 export function initChat() {
   return {
@@ -84,10 +86,6 @@ export function initChat() {
 
     loadConversationParticipants(param) {
       const _this = this;
-      const eyeIcon = feather.icons.eye.toSvg();
-      const phoneIcon = feather.icons.phone.toSvg();
-      const fileIcon = feather.icons.file.toSvg();
-      const profileIcon = feather.icons["more-horizontal"].toSvg();
 
       const ownerParticipant = document.getElementById("owner-participant");
       const allParticipants = document.getElementById("regular-participants");
@@ -113,7 +111,7 @@ export function initChat() {
               let template = `
                     <div class="participant-item is-owner">
                         <div class="avatar-container">
-                            <img src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                            <img src="${data.participants[i].photoUrl}" alt="">
                             <div class="user-status is-${data.participants[i].status}"></div>
                         </div>
                         <div class="meta">
@@ -141,7 +139,7 @@ export function initChat() {
 
               navbarParticipants.innerHTML += `
                     <div class="avatar-container">
-                        <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                        <img class="user-avatar" src="${data.participants[i].photoUrl}" alt="">
                     </div>
                 `;
               navbarParticipantName.innerHTML = data.participants[i].name;
@@ -149,7 +147,7 @@ export function initChat() {
               let template = `
                         <div class="participant-item is-participant">
                             <div class="avatar-container">
-                                <img src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                                <img src="${data.participants[i].photoUrl}" alt="">
                                 <div class="user-status is-${data.participants[i].status}"></div>
                             </div>
                             <div class="meta">
@@ -177,7 +175,7 @@ export function initChat() {
               if (i < 6) {
                 navbarParticipants.innerHTML += `
                     <div class="avatar-container">
-                        <img class="user-avatar" src="https://via.placeholder.com/150x150" data-demo-src="${data.participants[i].photoUrl}" alt="">
+                        <img class="user-avatar" src="${data.participants[i].photoUrl}" alt="">
                     </div>
                 `;
               }
@@ -186,9 +184,6 @@ export function initChat() {
             if (i === data.participants.length - 1) {
               //Set navbar count
               navbarParticipantCount.innerHTML = data.participants.length - 1;
-
-              //Change demo images
-              switchDemoImages(env);
 
               //Simulate loading
               setTimeout(() => {

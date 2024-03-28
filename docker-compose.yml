@@ -7,16 +7,16 @@ services:
     image: digisquad/cssninja.wire-b-demo:latest
     networks:
       - cssninja-services
-    restart: '${MOEBIUS_DEMO_RESTART:-no}'
+    restart: 'unless-stopped'
     labels:
       traefik.enable: true
       traefik.docker.network: 'cssninja-services'
       traefik.http.routers.wire-b-demo.entrypoints: 'http'
       traefik.http.routers.wire-b-demo.rule: 'Host(`wire-b.${HOST:-127.0.0.1.nip.io}`)'
-      traefik.http.routers.wire-b-demo.middlewares: 'https-redirect@docker'
+      traefik.http.routers.wire-b-demo.middlewares: 'https-redirect@file'
+      traefik.http.services.wire-b-demo-https.loadbalancer.server.port: 8080
       traefik.http.routers.wire-b-demo-https.rule: 'Host(`wire-b.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.wire-b-demo-https.tls: true
       traefik.http.routers.wire-b-demo-https.entrypoints: 'https'
       traefik.http.routers.wire-b-demo-https.tls.certresolver: 'http'
-      traefik.http.services.wire-b-demo-https.loadbalancer.server.port: 8080
 
