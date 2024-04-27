@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/cssninjaStudio/wire-b/compare/v3.1.1...v3.2.0) (2024-04-27)
+
+
+### Features
+
+* migrate to iconify-icon, update dependencies ([488498f](https://github.com/cssninjaStudio/wire-b/commit/488498f5a3cd5ec19fc2191981eb6dbacc1fc543))
+
 ### [3.1.1](https://github.com/cssninjaStudio/wire-b/compare/v3.1.0...v3.1.1) (2023-05-03)
 
 ## [3.1.0](https://github.com/cssninjaStudio/wire-b/compare/v3.0.0...v3.1.0) (2023-02-10)
