@@ -1,8 +1,4 @@
-<div
-  x-ref="composedrop"
-  @click.away="$refs.composedrop.classList.remove('is-active')"
-  class="dropdown compose-dropdown is-up is-spaced dropdown-trigger"
->
+<div x-ref="composedrop" @click.away="$refs.composedrop.classList.remove('is-active')" class="dropdown compose-dropdown is-up is-spaced dropdown-trigger">
   <div @click="$refs.composedrop.classList.add('is-active')">
     <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <div class="add-button">
@@ -19,7 +15,7 @@
       </div>
       <a href="#" class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:code"></i>
+          <iconify-icon class="iconify" icon="lucide:code"></iconify-icon>
           <div class="media-content">
             <h3>Code snippet</h3>
             <small>Add and paste a code snippet.</small>
@@ -28,7 +24,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:file"></i>
+          <iconify-icon class="iconify" icon="lucide:file"></iconify-icon>
           <div class="media-content">
             <h3>Note</h3>
             <small>Add and paste a note.</small>
@@ -38,7 +34,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:globe"></i>
+          <iconify-icon class="iconify" icon="lucide:globe"></iconify-icon>
           <div class="media-content">
             <h3>Remote file</h3>
             <small>Add a file from a remote drive.</small>
@@ -47,7 +43,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:monitor"></i>
+          <iconify-icon class="iconify" icon="lucide:monitor"></iconify-icon>
           <div class="media-content">
             <h3>Local file</h3>
             <small>Add a file from your computer.</small>

@@ -1,15 +1,7 @@
-<div
-  x-ref="settingsdrop"
-  @click.away="$refs.settingsdrop.classList.remove('is-active')"
-  class="dropdown is-spaced is-right dropdown-trigger"
->
-  <button
-    @click="$refs.settingsdrop.classList.add('is-active')"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
+<div x-ref="settingsdrop" @click.away="$refs.settingsdrop.classList.remove('is-active')" class="dropdown is-spaced is-right dropdown-trigger">
+  <button @click="$refs.settingsdrop.classList.add('is-active')" aria-haspopup="true" aria-expanded="false">
     <a class="chat-nav-item is-icon">
-      <i class="iconify" data-icon="lucide:settings"></i>
+      <iconify-icon class="iconify" icon="lucide:settings"></iconify-icon>
     </a>
   </button>
   <div class="dropdown-menu" role="menu">
@@ -19,7 +11,7 @@
       </div>
       <a href="#" class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:message-circle"></i>
+          <iconify-icon class="iconify" icon="lucide:message-circle"></iconify-icon>
           <div class="media-content">
             <h3>Details</h3>
             <small>View this conversation's details.</small>
@@ -28,7 +20,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:sliders"></i>
+          <iconify-icon class="iconify" icon="lucide:sliders"></iconify-icon>
           <div class="media-content">
             <h3>Preferences</h3>
             <small>Define your preferences.</small>
@@ -38,7 +30,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:bell"></i>
+          <iconify-icon class="iconify" icon="lucide:bell"></iconify-icon>
           <div class="media-content">
             <h3>Notifications</h3>
             <small>Set notifications settings.</small>
@@ -47,7 +39,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:more-horizontal"></i>
+          <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
           <div class="media-content">
             <h3>Silence</h3>
             <small>Disable notifications.</small>
@@ -57,7 +49,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:archive"></i>
+          <iconify-icon class="iconify" icon="lucide:archive"></iconify-icon>
           <div class="media-content">
             <h3>Archive</h3>
             <small>Archive this conversation.</small>
@@ -66,7 +58,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:trash-2"></i>
+          <iconify-icon class="iconify" icon="lucide:trash-2"></iconify-icon>
           <div class="media-content">
             <h3>Delete</h3>
             <small>Delete this conversation.</small>

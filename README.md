@@ -7,13 +7,12 @@
 ## ✌️ preview
 
 Check out the live demo by clicking [here](https://wire-b.cssninja.io/).
-Wire B is built with [Bootstrap](https://getbootstrap.com/) and [Alpine JS](https://github.com/alpinejs/alpine).
+Wire B is built with [Astro](https://astro.build), [Bootstrap](https://getbootstrap.com/) and [Alpine JS](https://github.com/alpinejs/alpine).
 
 ## 👍 Features
 
-* Gulp 4 and nodejs 16.x (minimum)
-* Bulma 0.9.x
-* ES6 support
+* Astro v4.x
+* Bootstrap v5.x
 * Alpine v3.x
 
 ## 👌 Usage

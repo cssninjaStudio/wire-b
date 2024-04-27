@@ -1,8 +1,4 @@
-<div
-  x-show="activePanelTab === 'details-tab'"
-  id="user-details"
-  class="panel-body is-user-details"
->
+<div x-show="activePanelTab === 'details-tab'" id="user-details" class="panel-body is-user-details">
   <div class="panel-body-inner">
     <div class="subheader">
       <div @click="closeUserDetails()" class="action-icon panel-back">
@@ -34,16 +30,16 @@
 
     <div class="user-actions">
       <a class="user-action">
-        <i class="iconify" data-icon="lucide:plus"></i>
+        <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
       </a>
       <a class="user-action">
-        <i class="iconify" data-icon="lucide:phone"></i>
+        <iconify-icon class="iconify" icon="lucide:phone"></iconify-icon>
       </a>
       <a class="user-action">
-        <i class="iconify" data-icon="lucide:mail"></i>
+        <iconify-icon class="iconify" icon="lucide:mail"></iconify-icon>
       </a>
       <a class="user-action">
-        <i class="iconify" data-icon="lucide:bell"></i>
+        <iconify-icon class="iconify" icon="lucide:bell"></iconify-icon>
       </a>
     </div>
 

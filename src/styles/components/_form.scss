@@ -56,7 +56,10 @@ Form Controls
             justify-content: center;
             align-items: center;
 
-            svg {
+            .iconify {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 height: 18px;
                 width: 18px;
                 stroke: $placeholder;
@@ -95,7 +98,7 @@ Custom toggle (change theme)
                                 opacity: 1;
                             }
 
-                            svg {
+                            .iconify {
                                 &.sun {
                                     display: none;
                                     stroke: $dark-text;
@@ -103,7 +106,7 @@ Custom toggle (change theme)
                                 }
 
                                 &.moon {
-                                    display: block;
+                                    display: flex;
                                     stroke: $white-light;
                                     color: $white-light;
                                 }
@@ -154,7 +157,9 @@ Custom toggle (change theme)
                         transition: all .3s;
                     }
 
-                    svg {
+                    .iconify {
+                        align-items: center;
+                        justify-content: center;
                         height: 14px;
                         width: 14px;
                         stroke-width: 1.6px;
@@ -162,7 +167,7 @@ Custom toggle (change theme)
                         color: $dark-text;
 
                         &.sun {
-                            display: block;
+                            display: flex;
                         }
 
                         &.moon {

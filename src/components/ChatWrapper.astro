@@ -1,19 +1,19 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Conversations from "../components/Conversations.astro";
-import AudreyConversation from "../components/conversations/AudreyConversation.astro";
-import BenConversation from "../components/conversations/BenConversation.astro";
-import EddieConversation from "../components/conversations/EddieConversation.astro";
-import JimConversation from "../components/conversations/JimConversation.astro";
-import KristieConversation from "../components/conversations/KristieConversation.astro";
-import MikeConversation from "../components/conversations/MikeConversation.astro";
-import TaraConversation from "../components/conversations/TaraConversation.astro";
-import WalterConversation from "../components/conversations/WalterConversation.astro";
-import ComposeDropdown from "../components/dropdowns/ComposeDropdown.astro";
-import PanelParticipants from "../components/panel/PanelParticipants.astro";
-import PanelDetails from "../components/panel/PanelDetails.astro";
-import PanelActivity from "../components/panel/PanelActivity.astro";
-import ModalNewConversation from "../components/modals/ModalNewConversation.astro";
+import Navigation from '../components/Navigation.astro'
+import Conversations from '../components/Conversations.astro'
+import AudreyConversation from '../components/conversations/AudreyConversation.astro'
+import BenConversation from '../components/conversations/BenConversation.astro'
+import EddieConversation from '../components/conversations/EddieConversation.astro'
+import JimConversation from '../components/conversations/JimConversation.astro'
+import KristieConversation from '../components/conversations/KristieConversation.astro'
+import MikeConversation from '../components/conversations/MikeConversation.astro'
+import TaraConversation from '../components/conversations/TaraConversation.astro'
+import WalterConversation from '../components/conversations/WalterConversation.astro'
+import ComposeDropdown from '../components/dropdowns/ComposeDropdown.astro'
+import PanelParticipants from '../components/panel/PanelParticipants.astro'
+import PanelDetails from '../components/panel/PanelDetails.astro'
+import PanelActivity from '../components/panel/PanelActivity.astro'
+import ModalNewConversation from '../components/modals/ModalNewConversation.astro'
 ---
 
 <div class="chat-wrapper">
@@ -22,14 +22,10 @@ import ModalNewConversation from "../components/modals/ModalNewConversation.astr
     <Navigation />
 
     <!-- Chat sidebar -->
-    <div
-      id="chat-sidebar"
-      class="users-sidebar"
-      :class="{
+    <div id="chat-sidebar" class="users-sidebar" :class=`{
           'is-mobile-active': layoutMobileActive,
           '': !layoutMobileActive
-      }"
-    >
+      }`>
       <!-- Header -->
       <a href="/" class="header-item">
         <img src="/img/logo/wire.svg" alt="" />
@@ -50,12 +46,12 @@ import ModalNewConversation from "../components/modals/ModalNewConversation.astr
     <div
       id="chat-body"
       class="chat-body"
-      :class="{
+      :class=`{
               'is-opened': chatBodyOpened,
               '': !chatBodyOpened,
               'is-mobile-active': layoutMobileActive,
               '': !layoutMobileActive
-          }"
+          }`
     >
       <!-- Conversation with Mike -->
       <MikeConversation />
@@ -85,14 +81,11 @@ import ModalNewConversation from "../components/modals/ModalNewConversation.astr
       <div class="chat-action">
         <div class="chat-action-inner">
           <div id="message-input-wrapper" class="control">
-            <textarea
-              id="message-input"
-              class="form-control comment-textarea"
-              rows="1"></textarea>
+            <textarea id="message-input" class="form-control comment-textarea" rows="1"></textarea>
             <ComposeDropdown />
             <div class="toolbar">
               <button id="emoji-picker-button" class="btn btn-emoji">
-                <i class="iconify" data-icon="lucide:smile"></i>
+                <iconify-icon class="iconify" icon="lucide:smile"></iconify-icon>
               </button>
               <button class="btn btn-primary">Send</button>
             </div>
@@ -106,12 +99,12 @@ import ModalNewConversation from "../components/modals/ModalNewConversation.astr
     <div
       id="chat-panel"
       class="chat-panel"
-      :class="{
+      :class=`{
           'is-opened': chatBodyOpened,
           '': !chatBodyOpened,
           'is-mobile-opened': sidebarMobileOpen,
           '': !sidebarMobileOpen
-      }"
+      }`
     >
       <div class="panel-inner">
         <div class="panel-header">
@@ -120,21 +113,19 @@ import ModalNewConversation from "../components/modals/ModalNewConversation.astr
               @click="switchPanelTabs($event)"
               class="nav-link"
               data-panel="participants-tab"
-              :class="{
+              :class=`{
                     'active': activePanelTab === 'participants-tab',
                     '': activePanelTab != 'participants-tab'
-                }"
-              >People</a
+                }`>People</a
             >
             <a
               @click="switchPanelTabs($event)"
               class="nav-link"
               data-panel="activity-tab"
-              :class="{
+              :class=`{
                     'active': activePanelTab === 'activity-tab',
                     '': activePanelTab != 'activity-tab'
-                }"
-              >Activity</a
+                }`>Activity</a
             >
             <div class="nav-naver"></div>
           </div>

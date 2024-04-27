@@ -1,15 +1,7 @@
-<div
-  x-ref="menudrop"
-  @click.away="$refs.menudrop.classList.remove('is-active')"
-  class="dropdown is-spaced is-right dropdown-trigger"
->
-  <button
-    @click="$refs.menudrop.classList.add('is-active')"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
+<div x-ref="menudrop" @click.away="$refs.menudrop.classList.remove('is-active')" class="dropdown is-spaced is-right dropdown-trigger">
+  <button @click="$refs.menudrop.classList.add('is-active')" aria-haspopup="true" aria-expanded="false">
     <a class="chat-nav-item is-icon">
-      <i class="iconify" data-icon="lucide:more-vertical"></i>
+      <iconify-icon class="iconify" icon="lucide:more-vertical"></iconify-icon>
     </a>
   </button>
   <div class="dropdown-menu" role="menu">
@@ -19,7 +11,7 @@
       </div>
       <a href="#" class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:file-text"></i>
+          <iconify-icon class="iconify" icon="lucide:file-text"></iconify-icon>
           <div class="media-content">
             <h3>Files</h3>
             <small>View all your files.</small>
@@ -28,7 +20,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:users"></i>
+          <iconify-icon class="iconify" icon="lucide:users"></iconify-icon>
           <div class="media-content">
             <h3>Users</h3>
             <small>View all users you're talking to.</small>
@@ -38,7 +30,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:gift"></i>
+          <iconify-icon class="iconify" icon="lucide:gift"></iconify-icon>
           <div class="media-content">
             <h3>Daily bonus</h3>
             <small>Get your daily bonus.</small>
@@ -47,7 +39,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:download-cloud"></i>
+          <iconify-icon class="iconify" icon="lucide:download-cloud"></iconify-icon>
           <div class="media-content">
             <h3>Downloads</h3>
             <small>See all your downloads.</small>
@@ -57,7 +49,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:life-buoy"></i>
+          <iconify-icon class="iconify" icon="lucide:life-buoy"></iconify-icon>
           <div class="media-content">
             <h3>Support</h3>
             <small>Reach our support team.</small>

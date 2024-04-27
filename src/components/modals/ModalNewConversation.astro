@@ -1,15 +1,11 @@
 ---
-import PlaceholderUser from "../misc/PlaceholderUser.astro";
+import PlaceholderUser from '../misc/PlaceholderUser.astro'
 ---
 
-<div
-  id="add-conversation-modal"
-  class="add-conversation-modal"
-  :class="{
+<div id="add-conversation-modal" class="add-conversation-modal" :class=`{
   'is-active': newConversationModalOpened,
   '': !newConversationModalOpened
-}"
->
+}`>
   <div @click="toggleNewConversationModal()" class="inner"></div>
 
   <div class="new-conversation-panel">
@@ -19,7 +15,7 @@ import PlaceholderUser from "../misc/PlaceholderUser.astro";
     <div class="form-group has-icon">
       <input class="form-control search-field" placeholder="Search users..." />
       <div class="form-icon">
-        <i class="iconify" data-icon="lucide:search"></i>
+        <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
       </div>
       <div class="search-results has-slimscroll"></div>
     </div>
@@ -36,10 +32,7 @@ import PlaceholderUser from "../misc/PlaceholderUser.astro";
     </div>
 
     <div class="btn-wrap">
-      <button
-        id="create-conversation-button"
-        class="btn btn-primary is-disabled">Create Conversation</button
-      >
+      <button id="create-conversation-button" class="btn btn-primary is-disabled">Create Conversation</button>
     </div>
   </div>
 </div>

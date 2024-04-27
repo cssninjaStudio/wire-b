@@ -2,11 +2,7 @@
 import Reactions from '../misc/Reactions.astro'
 ---
 
-<div
-  x-show="activeConversation === 'conversation-8'"
-  id="conversation-8"
-  class="chat-body-inner has-slimscroll"
->
+<div x-show="activeConversation === 'conversation-8'" id="conversation-8" class="chat-body-inner has-slimscroll">
   <div class="date-divider">
     <hr class="date-divider-line" />
     <span class="date-divider-text">September 28</span>
@@ -55,9 +51,7 @@ import Reactions from '../misc/Reactions.astro'
       <img src="/img/avatars/helen.jpg" alt="" />
       <div class="message-block">
         <span>11:53am</span>
-        <div class="message-text">
-          Walter, i forgot my folder at your place yesterday.
-        </div>
+        <div class="message-text">Walter, i forgot my folder at your place yesterday.</div>
 
         <!--Reactions buttons-->
         <Reactions />
@@ -79,9 +73,7 @@ import Reactions from '../misc/Reactions.astro'
       <img src="/img/avatars/walter.jpg" alt="" />
       <div class="message-block">
         <span>12:19pm</span>
-        <div class="message-text">
-          Yeah i noticed. I'll drop it in half an hour at your office.
-        </div>
+        <div class="message-text">Yeah i noticed. I'll drop it in half an hour at your office.</div>
 
         <!--Reactions buttons-->
         <Reactions />

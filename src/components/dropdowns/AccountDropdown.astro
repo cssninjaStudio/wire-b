@@ -1,13 +1,5 @@
-<div
-  x-ref="userdrop"
-  @click.away="$refs.userdrop.classList.remove('is-active')"
-  class="dropdown is-spaced is-right dropdown-trigger"
->
-  <button
-    @click="$refs.userdrop.classList.add('is-active')"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
+<div x-ref="userdrop" @click.away="$refs.userdrop.classList.remove('is-active')" class="dropdown is-spaced is-right dropdown-trigger">
+  <button @click="$refs.userdrop.classList.add('is-active')" aria-haspopup="true" aria-expanded="false">
     <a class="chat-nav-item is-account">
       <img class="user-avatar" src="/img/avatars/helen.jpg" alt="" />
     </a>
@@ -20,7 +12,7 @@
       </div>
       <a href="#" class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:grid"></i>
+          <iconify-icon class="iconify" icon="lucide:grid"></iconify-icon>
           <div class="media-content">
             <h3>Dashboard</h3>
             <span>Back to Dashboard.</span>
@@ -29,7 +21,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:user"></i>
+          <iconify-icon class="iconify" icon="lucide:user"></iconify-icon>
           <div class="media-content">
             <h3>Profile</h3>
             <small>View your user profile.</small>
@@ -38,7 +30,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:mail"></i>
+          <iconify-icon class="iconify" icon="lucide:mail"></iconify-icon>
           <div class="media-content">
             <h3>Inbox</h3>
             <small>Open your messages inbox.</small>
@@ -48,7 +40,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:check"></i>
+          <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
           <div class="media-content">
             <h3>Tasks</h3>
             <small>View your pending tasks.</small>
@@ -57,7 +49,7 @@
       </a>
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:box"></i>
+          <iconify-icon class="iconify" icon="lucide:box"></iconify-icon>
           <div class="media-content">
             <h3>My Projects</h3>
             <small>View your projects board.</small>
@@ -67,7 +59,7 @@
       <hr class="dropdown-divider" />
       <a class="dropdown-item">
         <div class="media">
-          <i class="iconify" data-icon="lucide:log-out"></i>
+          <iconify-icon class="iconify" icon="lucide:log-out"></iconify-icon>
           <div class="media-content">
             <h3>Logout</h3>
             <small>Logout from your account</small>

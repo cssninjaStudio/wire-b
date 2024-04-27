@@ -130,10 +130,14 @@ Dropdowns
                     transition: all .3s;
                 }
 
-                svg {
+                .iconify {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     height: 18px;
                     width: 18px;
                     margin: 0 12px;
+                    color: $medium-text;
                     stroke: $medium-text;
                     stroke-width: 1.4px;
                     transition: all .3s;
@@ -190,7 +194,7 @@ Dropdowns
                         color: $accent !important;
                     }
 
-                    svg {
+                    .iconify {
                         stroke: $accent !important;
                     }
                 }

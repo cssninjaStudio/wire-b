@@ -1,26 +1,23 @@
 ---
-import MenuDropdown from "../components/dropdowns/MenuDropdown.astro";
-import SettingsDropdown from "../components/dropdowns/SettingsDropdown.astro";
-import AccountDropdown from "../components/dropdowns/AccountDropdown.astro";
+import MenuDropdown from '../components/dropdowns/MenuDropdown.astro'
+import SettingsDropdown from '../components/dropdowns/SettingsDropdown.astro'
+import AccountDropdown from '../components/dropdowns/AccountDropdown.astro'
 ---
 
-<div
-  class="chat-nav"
-  :class="{
+<div class="chat-nav" :class=`{
         'is-mobile-active': layoutMobileActive,
         '': !layoutMobileActive
-    }"
->
+    }`>
   <div class="nav-start">
     <div class="nav-item burger-wrapper">
       <button
         class="menu-icon v-5"
         @click="toggleMobileLayout()"
         class="menu-icon v-4"
-        :class="{
-                    'is-open': layoutMobileActive,
-                    '': !layoutMobileActive
-                }"
+        :class=`{
+            'is-open': layoutMobileActive,
+            '': !layoutMobileActive
+        }`
       >
         <span></span>
       </button>
@@ -55,8 +52,8 @@ import AccountDropdown from "../components/dropdowns/AccountDropdown.astro";
           <span class="track">
             <span class="track-inner"></span>
             <span class="track-knob">
-              <i class="sun iconify" data-icon="lucide:sun"></i>
-              <i class="moon iconify" data-icon="lucide:moon"></i>
+              <iconify-icon class="sun iconify" icon="lucide:sun"></iconify-icon>
+              <iconify-icon class="moon iconify" icon="lucide:moon"></iconify-icon>
             </span>
           </span>
         </label>
@@ -73,7 +70,7 @@ import AccountDropdown from "../components/dropdowns/AccountDropdown.astro";
       <div class="form-group has-icon">
         <input type="text" class="form-control" placeholder="Search messages" />
         <div class="form-icon">
-          <i class="iconify" data-icon="lucide:search"></i>
+          <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
         </div>
       </div>
     </div>
@@ -84,14 +81,10 @@ import AccountDropdown from "../components/dropdowns/AccountDropdown.astro";
     <AccountDropdown />
 
     <div class="nav-item burger-wrapper-right">
-      <button
-        @click="toggleMobileSidebar()"
-        class="menu-icon v-4"
-        :class="{
+      <button @click="toggleMobileSidebar()" class="menu-icon v-4" :class=`{
             'is-open': sidebarMobileOpen,
             '': !sidebarMobileOpen
-        }"
-      >
+        }`>
         <span></span>
       </button>
     </div>
