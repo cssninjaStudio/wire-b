@@ -15,7 +15,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT",
   "dependencies": {
     "@alpinejs/collapse": "3.13.10",
     "@alpinejs/intersect": "3.13.10",
