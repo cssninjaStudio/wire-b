@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/cssninjaStudio/wire-b/compare/v3.2.0...v3.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([80e598f](https://github.com/cssninjaStudio/wire-b/commit/80e598f4cd1016dc03e4e73b3e2332f505c5600c))
+
 ## [3.2.0](https://github.com/cssninjaStudio/wire-b/compare/v3.1.1...v3.2.0) (2024-04-27)
 
 
